@@ -1,0 +1,48 @@
+{{ if .L }}
+<div class="contents__item item-{{ .SN }}">
+  <p class="contents__item-nameEn" >{{ .C }}</p>
+  <p class="contents__item-nameJa" >{{ .K }}</p>
+  <div class="contents__item__info">
+    <p class="contents__item__info-desc">{{ .J }}</p>
+    <p class="contents__item__info-priceDir">左</p>
+    {{ if .H }}<a href="{{ .H }}">{{ end }}
+      <p class="contents__item__info-price{{ if .H }} link{{ end }}">
+        <span>{{ .F }}</span><span class="fs-m">+tax</span>　{{ .D }}
+      </p>
+    {{ if .H }}</a>{{ end }}
+    <p class="contents__item__info-priceDir">中央</p>
+    {{ if .I }}<a href="{{ .I }}">{{ end }}
+      <p class="contents__item__info-price{{ if .I }} link{{ end }}">
+        <span>{{ .G }}</span><span class="fs-m">+tax</span>　{{ .E }}
+      </p>
+    {{ if .I }}</a>{{ end }}
+    <p class="contents__item__info-priceDir">右</p>
+    {{ if .N }}<a href="{{ .N }}">{{ end }}
+      <p class="contents__item__info-price{{ if .N }} link{{ end }}">
+        <span>{{ .M }}</span><span class="fs-m">+tax</span>　{{ .L }}
+      </p>
+    {{ if .N }}</a>{{ end }}
+  </div>
+</div>
+{{ else }}
+{{ if .B }}<div class="contents__item item-{{ .SN }} img">{{ else }}
+<div class="contents__item item-{{ .SN }}">
+  <p class="contents__item-nameEn" >{{ .C }}</p>
+  <p class="contents__item-nameJa" >{{ .K }}</p>
+  <div class="contents__item__info">
+    <p class="contents__item__info-desc">{{ .J }}</p>
+    {{ if .E }}<p class="contents__item__info-priceDir">左</p>{{ end }}
+    {{ if .H }}<a href="{{ .H }}">{{ end }}
+      <p class="contents__item__info-price{{ if .H }} link{{ end }}">
+        <span>{{ .F }}</span><span class="fs-m">+tax</span>　{{ .D }}
+      </p>
+    {{ if .H }}</a>{{ end }}
+    {{ if .E }}<p class="contents__item__info-priceDir">右</p>
+    {{ if .I }}<a href="{{ .I }}">{{ end }}
+      <p class="contents__item__info-price{{ if .I }} link{{ end }}">
+        <span>{{ .G }}</span><span class="fs-m">+tax</span>　{{ .E }}
+      </p>
+    {{ if .I }}</a>{{ end }}{{ end }}
+  </div>{{ end }}
+</div>
+{{ end }}

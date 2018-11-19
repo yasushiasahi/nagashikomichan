@@ -1,0 +1,22 @@
+<div class="contents__item-wrapper">
+  {{ if .B }}<div class="contents__item item-{{ .SN }} img">{{ else }}
+  <div class="contents__item item-{{ .SN }} hasItem">
+    <p class="contents__item-nameEn">{{ .C }}</p>
+    <p class="contents__item-nameJa"><span>{{ .K }}</span></p>
+    <div class="contents__item__info">
+      <div class="contents__item__info-inner">
+        <button class="contents__item__info-close"></button>
+        <p class="contents__item__info-nameEn">{{ .C }}</p>
+        <p class="contents__item__info-nameJa"><span>{{ .K }}</span></p>
+        <p class="contents__item__info-img"><img src='/sp/xmas/images/item/{{ .O }}/item-{{ .SN }}.jpg'></p>
+        <p class="contents__item__info-desc">{{ .J }}</p>
+        <p class="contents__item__info-price"><span>{{ .F }}</span>+tax　{{ .D }}</p>
+        {{ if .G }}<p class="contents__item__info-price"><span>{{ .G }}</span>+tax　{{ .E }}</p>{{ end }}
+        {{ if .L }}<p class="contents__item__info-price"><span>{{ .L }}</span>+tax　{{ .E }}</p>{{ end }}
+        {{ if .H }}<p class="contents__item__info-btn"><a href="{{ .H }}">ONLINE SHOP</a></p>{{ end }}
+        {{ if .I }}<p class="contents__item__info-btn"><a href="{{ .I }}">ONLINE SHOP</a></p>{{ end }}
+        {{ if .N }}<p class="contents__item__info-btn"><a href="{{ .N }}">ONLINE SHOP</a></p>{{ end }}
+      </div>
+    </div>
+  {{ end }}</div>
+</div>
